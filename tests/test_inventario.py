@@ -27,3 +27,12 @@ def test_listar_productos():
     lista = inventario.listar_productos()
 
     assert len(lista) == 2
+
+def test_eliminar_producto():
+    inventario = Inventario()
+    inventario.registrar_producto("004", "Teclado", 10)
+    inventario.eliminar_producto("004")
+
+    lista = inventario.listar_productos()
+
+    assert len(lista) == 0

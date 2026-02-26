@@ -1,4 +1,5 @@
 class Inventario:
+
     def __init__(self):
         self.productos = {}
 
@@ -16,3 +17,9 @@ class Inventario:
     
     def listar_productos(self):
         return list(self.productos.values())
+    
+    def eliminar_producto(self, codigo):
+        if codigo in self.productos:
+            del self.productos[codigo]
+            return True
+        return False
