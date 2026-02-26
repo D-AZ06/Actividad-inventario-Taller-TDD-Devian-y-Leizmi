@@ -10,3 +10,6 @@ class Inventario:
 
     def consultar_producto(self, codigo):
         return self.productos[codigo]
+    
+    def actualizar_cantidad(self, codigo, cantidad):
+        self.productos[codigo]["cantidad"] += cantidad
