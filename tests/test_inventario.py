@@ -18,3 +18,12 @@ def test_actualizar_cantidad():
     producto = inventario.consultar_producto("001")
 
     assert producto["cantidad"] == 15
+
+def test_listar_productos():
+    inventario = Inventario()
+    inventario.registrar_producto("001", "Shampoo", 10)
+    inventario.registrar_producto("002", "Jabon", 5)
+
+    lista = inventario.listar_productos()
+
+    assert len(lista) == 2
