@@ -36,3 +36,9 @@ def test_eliminar_producto():
     lista = inventario.listar_productos()
 
     assert len(lista) == 0
+
+def test_consultar_producto_inexistente():
+    inventario = Inventario()
+    resultado = inventario.consultar_producto("999")
+    
+    assert resultado is None
